@@ -1,0 +1,515 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", sans-serif;
+    background: #f6f6f6;
+    color: #000;
+    line-height: 1.45;
+}
+
+.page {
+    max-width: 950px;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: relative;
+}
+
+.colonne-gauche {
+    background: #000030;
+    color: #f6f6f6;
+    padding: 2.3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 0.9rem;
+}
+
+.section-laterale {
+    border-left: 2px solid #f6f6f6;
+    padding-left: 0.8rem;
+}
+
+.titre-lateral {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.75rem;
+    margin-bottom: 0.55rem;
+    opacity: 0.9;
+}
+
+.ligne-laterale {
+    margin-bottom: 0.25rem;
+}
+
+.petit-lateral {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.liste-laterale {
+    list-style: none;
+}
+
+.liste-laterale li {
+    margin-top: 0.2rem;
+}
+
+.emphase-lateral {
+    font-weight: 600;
+}
+
+.contenu-principal {
+    padding: 2.5rem 3rem 2.5rem 2.4rem;
+    font-size: 0.9rem;
+}
+
+.nom {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.06rem;
+}
+
+.section {
+    margin-top: 1.8rem;
+}
+
+.titre-section {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.7rem;
+}
+
+.titre-section::before {
+    content: "";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2px;
+    background: #222;
+    margin-right: 0.8rem;
+    vertical-align: middle;
+}
+
+
+.bloc-experience,
+.bloc-projet,
+.bloc-formation {
+    margin-top: 0.9rem;
+}
+
+.entete {
+    font-weight: 600;
+}
+
+.meta {
+    font-size: 0.82rem;
+    color: #000;
+}
+
+.texte-attenue {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.liste {
+    margin-left: 1.1rem;
+    list-style: disc;
+    font-size: 0.86rem;
+}
+
+.liste li {
+    margin-top: 0.2rem;
+}
+
+.titre-groupe-competences {
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.groupe-competences {
+    margin-top: 0;
+}
+
+.grille-competences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem 2.5rem;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+.grille-competences .titre-groupe-competences {
+    margin-top: 0;
+}
+
+.grille-competences>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+}
+
+@media (max-width: 720px) {
+    .grille-competences {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+}
+
+.btn-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.28rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.btn-top:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.changer-langue {
+    position: absolute;
+    top: 3.2rem;
+    right: 1rem;
+}
+
+.btn-interests {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+@media (max-width: 850px) {
+
+    .page {
+        grid-template-columns: 36% 64%;
+        margin: 1rem;
+        min-width: 480px;
+    }
+
+    .colonne-gauche {
+        padding: 1.6rem 1.2rem;
+    }
+
+    .changer-langue {
+        position: absolute;
+        top: 0.35rem;
+        right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-interests {
+        position: absolute;
+        top: 2.1rem;
+        right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .changer-langue,
+    .btn-interests {
+        position: static !important;
+        display: inline-flex;
+        margin: 0.15rem 0;
+        right: auto;
+        top: auto;
+        font-size: 0.9rem;
+        padding: 0.22rem 0.5rem;
+    }
+
+    .changer-langue {
+        order: 0;
+    }
+
+    .btn-interests {
+        order: 1;
+    }
+
+    .nom {
+        order: 2;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .page {
+        grid-template-columns: 42% 58%;
+        min-width: 420px;
+    }
+
+    .nom {
+        font-size: 1.6rem;
+    }
+
+    .titre-poste {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+    }
+
+    .colonne-gauche {
+        padding: 1.2rem 0.9rem;
+        font-size: 0.88rem;
+    }
+
+    .contenu-principal {
+        padding: 1.2rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .changer-langue,
+    .btn-interests {
+        position: static !important;
+        display: inline-flex;
+        margin: 0.15rem 0;
+        right: auto;
+        top: auto;
+        font-size: 0.9rem;
+        padding: 0.22rem 0.5rem;
+    }
+
+    .changer-langue {
+        order: 0;
+    }
+
+    .btn-interests {
+        order: 1;
+    }
+
+    .nom {
+        order: 2;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        max-width: 100%;
+        margin: 0.6rem;
+        box-shadow: none;
+        border-radius: 8px;
+    }
+
+    .colonne-gauche {
+        width: 200px;
+        max-width: 200px;
+        padding: 0.9rem 0.8rem;
+        align-self: start;
+        position: sticky;
+        top: 0.6rem;
+    }
+
+    .contenu-principal {
+        width: auto;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .section-laterale {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .grille-competences {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .changer-langue {
+        position: absolute;
+        top: 0.35rem;
+        right: 0.6rem;
+    }
+
+    .btn-interests {
+        position: absolute;
+        top: 1.9rem;
+        right: 0.6rem;
+    }
+
+    .nom {
+        font-size: 1.4rem;
+    }
+
+    .titre-groupe-competences {
+        margin-top: 0.6rem;
+    }
+
+    .liste,
+    .liste-laterale {
+        font-size: 0.92rem;
+    }
+
+    html[lang="en"] .page {
+        grid-template-columns: 200px 1fr;
+    }
+
+    html[lang="en"] .colonne-gauche {
+        width: 200px;
+        max-width: 200px;
+    }
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 5mm;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        display: grid;
+        grid-template-columns: 28% 72%;
+        gap: 0;
+        min-height: 0;
+    }
+
+    .btn-top,
+    .changer-langue,
+    .btn-interests {
+        display: none;
+    }
+
+    .colonne-gauche {
+        padding: 12mm 8mm;
+        gap: 1.8rem;
+        font-size: 10.5px;
+    }
+
+    .section-laterale {
+        padding-left: 0.75rem;
+    }
+
+    .titre-lateral {
+        font-size: 9.5px;
+        margin-bottom: 0.55rem;
+        letter-spacing: 0.15em;
+    }
+
+    .ligne-laterale {
+        margin-bottom: 0.28rem;
+        font-size: 10.5px;
+    }
+
+    .petit-lateral {
+        font-size: 9.5px;
+    }
+
+    .liste-laterale {
+        font-size: 10.5px;
+    }
+
+    .liste-laterale li {
+        margin-top: 0.22rem;
+    }
+
+    .contenu-principal {
+        padding: 10mm 8.5mm;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .nom {
+        font-size: 22px;
+        margin-bottom: 0.75rem;
+    }
+
+    .section {
+        margin-top: 1.4rem;
+    }
+
+    .titre-section {
+        font-size: 11px;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.2em;
+    }
+
+    .titre-section::before {
+        width: 2.3rem;
+        margin-right: 0.7rem;
+    }
+
+    .bloc-experience,
+    .bloc-projet,
+    .bloc-formation {
+        margin-top: 0.8rem;
+    }
+
+    .entete {
+        font-size: 11px;
+    }
+
+    .meta {
+        font-size: 10px;
+    }
+
+    .texte-attenue {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .liste {
+        margin-left: 1.1rem;
+        font-size: 10px;
+    }
+
+    .liste li {
+        margin-top: 0.2rem;
+    }
+
+    .grille-competences {
+        gap: 0.9rem 1.8rem;
+    }
+
+    .titre-groupe-competences {
+        font-size: 11px;
+        margin-top: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+}
