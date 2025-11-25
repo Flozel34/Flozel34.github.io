@@ -34,6 +34,7 @@ body {
 .section-laterale {
     border-left: 2px solid #f6f6f6;
     padding-left: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .titre-lateral {
@@ -396,6 +397,7 @@ body {
         background: #fff;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        font-size: 11px;
     }
 
     .page {
@@ -405,9 +407,10 @@ body {
         box-shadow: none;
         border-radius: 0;
         display: grid;
-        grid-template-columns: 28% 72%;
+        grid-template-columns: 30% 70%;
         gap: 0;
-        min-height: 0;
+        min-height: 100vh;
+        page-break-inside: avoid;
     }
 
     .btn-top,
@@ -418,98 +421,111 @@ body {
 
     .colonne-gauche {
         padding: 12mm 8mm;
-        gap: 1.8rem;
-        font-size: 10.5px;
+        gap: 2.2rem;
+        font-size: 11px;
     }
 
     .section-laterale {
-        padding-left: 0.75rem;
+        padding-left: 0.8rem;
+        margin-bottom: 1.4rem;
     }
 
     .titre-lateral {
-        font-size: 9.5px;
-        margin-bottom: 0.55rem;
+        font-size: 10px;
+        margin-bottom: 0.6rem;
         letter-spacing: 0.15em;
     }
 
     .ligne-laterale {
-        margin-bottom: 0.28rem;
-        font-size: 10.5px;
+        margin-bottom: 0.3rem;
+        font-size: 11px;
     }
 
     .petit-lateral {
-        font-size: 9.5px;
+        font-size: 10px;
     }
 
     .liste-laterale {
-        font-size: 10.5px;
+        font-size: 11px;
+        margin-left: 1rem;
     }
 
     .liste-laterale li {
-        margin-top: 0.22rem;
+        margin-top: 0.25rem;
     }
 
     .contenu-principal {
-        padding: 10mm 8.5mm;
+        padding: 12mm 10mm;
         font-size: 11px;
         line-height: 1.4;
     }
 
     .nom {
-        font-size: 22px;
-        margin-bottom: 0.75rem;
+        font-size: 24px;
+        margin-bottom: 1rem;
     }
 
     .section {
-        margin-top: 1.4rem;
+        margin-top: 1.8rem;
     }
 
     .titre-section {
-        font-size: 11px;
-        margin-bottom: 0.6rem;
+        font-size: 12px;
+        margin-bottom: 0.8rem;
         letter-spacing: 0.2em;
     }
 
     .titre-section::before {
-        width: 2.3rem;
-        margin-right: 0.7rem;
+        width: 2.5rem;
+        margin-right: 0.8rem;
+        height: 2px;
     }
 
     .bloc-experience,
     .bloc-projet,
     .bloc-formation {
-        margin-top: 0.8rem;
+        margin-top: 1.2rem;
     }
 
     .entete {
         font-size: 11px;
+        margin-bottom: 0.3rem;
     }
 
     .meta {
         font-size: 10px;
+        margin-bottom: 0.4rem;
     }
 
     .texte-attenue {
         font-size: 10px;
-        line-height: 1.35;
+        line-height: 1.4;
+        margin-top: 0.3rem;
     }
 
     .liste {
-        margin-left: 1.1rem;
+        margin-left: 1.2rem;
         font-size: 10px;
     }
 
     .liste li {
-        margin-top: 0.2rem;
+        margin-top: 0.3rem;
     }
 
     .grille-competences {
-        gap: 0.9rem 1.8rem;
+        gap: 1.2rem 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    .groupe-competences {
+        page-break-inside: avoid;
+        margin-bottom: 0.8rem;
     }
 
     .titre-groupe-competences {
         font-size: 11px;
         margin-top: 0.6rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.4rem;
     }
 }
