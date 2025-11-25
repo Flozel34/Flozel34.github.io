@@ -101,9 +101,6 @@
     margin-bottom: 0.4rem;
 }
 
-/* ===== Media Queries Responsive ===== */
-
-/* 1050px : Vidéo sur ligne 1, images sur ligne 2 */
 @media (max-width: 1050px) {
     .page-interet .wrap, .interests-page .media-wrap { 
         flex-direction: column;
@@ -133,7 +130,6 @@
     }
 }
 
-/* 850px : Boutons commencent à se repositionner */
 @media (max-width: 850px) {
     .page-interet .wrap, .interests-page .media-wrap { 
         flex-direction: column;
@@ -178,7 +174,6 @@
     }
 }
 
-/* 720px : Passage en mode mobile (pile verticale) */
 @media (max-width: 720px) {
     .page-interet .wrap, .interests-page #judo .media-wrap {
         flex-direction: column;
@@ -210,7 +205,6 @@
     }
 }
 
-/* 600px : Réduction des tailles des boutons */
 @media (max-width: 600px) {
     .page-interet header, .interests-page header {
         gap: 0.35rem;
@@ -230,7 +224,6 @@
     }
 }
 
-/* 480px : Très petit écran, miniatures encore plus petites */
 @media (max-width: 480px) {
     .page-interet .photos img, .interests-page #judo .photos img {
         flex: 0 0 180px;
@@ -243,7 +236,6 @@
     }
 }
 
-/* ===== Styling des albums Spotify ===== */
 .spotify-albums {
     display: flex;
     flex-direction: column;
