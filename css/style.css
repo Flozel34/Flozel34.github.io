@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica", sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.45;
+}
+
+.page {
+    max-width: 950px;
+    margin: 2rem auto;
+    background: #FEFEFE;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
+    display: flex;
+    position: relative;
+}
+
+.colonne-gauche {
+    background: #000030;
+    color: #fff;
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.section-laterale {
+    border-left: 2px solid #FEFEFE;
+    padding-left: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.titre-lateral {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.ligne-laterale {
+    margin-bottom: 0.25rem;
+}
+.petit-lateral {
+    font-size: 0.8rem;
+}
+
+.liste-laterale {
+    list-style: none;
+}
+
+.liste-laterale li {
+    margin-top: 0.2rem;
+}
+.gras {
+    font-weight: 550;
+}
+
+
+.contenu-principal {
+    padding: 2.5rem;
+    font-size: 1rem;
+}
+
+.nom {
+    font-size: 2.2rem;
+    letter-spacing: 0.06rem;
+}
+.section {
+    margin-top: 1.8rem;
+}
+.titre-section {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.bloc-experience,
+.bloc-projet,
+.bloc-formation {
+    margin-top: 0.9rem;
+}
+.entete {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.info {
+    font-size: 0.85rem;
+    color: #000;
+}
+.texte-attenue {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+
+.liste {
+    margin-left: 1rem;
+    font-size: 0.85rem;
+}
+.liste li {
+    margin-top: 0.21rem;
+}
+
+
+.titre-groupe-competences {
+    font-weight: bold;
+    margin: 0.3rem 0;
+}
+.grille-competences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2.5rem;
+}
+
+
+.btn-top {
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+}
+.btn-top:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.changer-langue {
+    position: absolute;
+    top: 3.2rem;
+    right: 1rem;
+}
+
+.btn-interet {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .page {
+        margin: 1rem;
+        box-shadow: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .btn-top {
+        position: static;
+        font-size: 0.9rem;
+    }
+
+    .nom {
+        order: 2;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .contenu-principal {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    .colonne-gauche {
+        padding:0.8rem;
+        align-self: start;
+        position: sticky;
+        top: 0.6rem;
+    }
+    
+    .grille-competences {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-laterale {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .colonne-gauche {
+        max-width: 160px;
+    }
+    .nom {
+        font-size: 1.4rem;
+    }
+    .ligne-laterale {
+        font-size: 0.75rem;
+    }
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 5mm;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        print-color-adjust: exact;
+        font-size: 12px;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 0;
+        min-height: 100vh;
+        page-break-inside: avoid;
+    }
+
+    .btn-top {
+        display: none;
+    }
+
+    .colonne-gauche {
+        padding: 8mm;
+        gap: 1.5rem;
+        font-size: 11px;
+        background-color: #000;
+    }
+
+    .section-laterale {
+        padding-left: 0.8rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .titre-lateral {
+        font-size: 10px;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.15em;
+    }
+
+    .ligne-laterale {
+        margin-bottom: 0.3rem;
+        font-size: 11px;
+    }
+
+    .petit-lateral {
+        font-size: 10px;
+    }
+
+    .liste-laterale {
+        font-size: 11px;
+        margin-left: 1rem;
+    }
+
+    .liste-laterale li {
+        margin-top: 0.25rem;
+    }
+
+    .contenu-principal {
+        padding: 12mm 10mm;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .nom {
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+
+    .section {
+        margin-top: 1.8rem;
+    }
+
+    .titre-section {
+        font-size: 12px;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.2em;
+    }
+
+    .titre-section::before {
+        width: 2.5rem;
+        margin-right: 0.8rem;
+        height: 2px;
+    }
+
+    .bloc-experience,
+    .bloc-projet,
+    .bloc-formation {
+        margin-top: 1.2rem;
+    }
+
+    .entete {
+        font-size: 11px;
+        margin-bottom: 0.3rem;
+    }
+
+    .info {
+        font-size: 10px;
+        margin-bottom: 0.4rem;
+    }
+
+    .texte-attenue {
+        font-size: 10px;
+        line-height: 1.4;
+        margin-top: 0.3rem;
+    }
+
+    .liste {
+        margin-left: 1.2rem;
+        font-size: 10px;
+    }
+
+    .liste li {
+        margin-top: 0.3rem;
+    }
+
+    .grille-competences {
+        gap: 1.2rem 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .groupe-competences {
+        margin-bottom: 0.8rem;
+    }
+
+    .titre-groupe-competences {
+        font-size: 11px;
+        margin-top: 0.6rem;
+        margin-bottom: 0.4rem;
+    }
+}
