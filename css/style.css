@@ -190,9 +190,6 @@ body {
         border-left: none;
         padding-left: 0;
     }
-}
-
-@media (max-width: 400px) {
     .colonne-gauche {
         max-width: 160px;
     }
@@ -210,93 +207,41 @@ body {
         margin: 5mm;
     }
 
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        background: #fff;
-        print-color-adjust: exact;
-        font-size: 12px;
-    }
-
-    .page {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        box-shadow: none;
-        border-radius: 0;
-        display: grid;
-        grid-template-columns: 30% 70%;
-        gap: 0;
-        min-height: 100vh;
-        page-break-inside: avoid;
-    }
-
     .btn-top {
         display: none;
     }
 
+    html,
+    body {
+        font-size: 12px;
+        print-color-adjust: exact;
+    }
+
+    .page {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
     .colonne-gauche {
         padding: 8mm;
-        gap: 1.5rem;
-        font-size: 11px;
         background-color: #000;
-    }
-
-    .section-laterale {
-        padding-left: 0.8rem;
-        margin-bottom: 1.1rem;
-    }
-
-    .titre-lateral {
-        font-size: 10px;
-        margin-bottom: 0.6rem;
-        letter-spacing: 0.15em;
-    }
-
-    .ligne-laterale {
-        margin-bottom: 0.3rem;
-        font-size: 11px;
-    }
-
-    .petit-lateral {
-        font-size: 10px;
     }
 
     .liste-laterale {
         font-size: 11px;
         margin-left: 1rem;
-    }
-
-    .liste-laterale li {
-        margin-top: 0.25rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     .contenu-principal {
-        padding: 12mm 10mm;
         font-size: 11px;
-        line-height: 1.4;
     }
 
     .nom {
         font-size: 24px;
         margin-bottom: 1rem;
-    }
-
-    .section {
-        margin-top: 1.8rem;
-    }
-
-    .titre-section {
-        font-size: 12px;
-        margin-bottom: 0.8rem;
-        letter-spacing: 0.2em;
-    }
-
-    .titre-section::before {
-        width: 2.5rem;
-        margin-right: 0.8rem;
-        height: 2px;
     }
 
     .bloc-experience,
@@ -312,17 +257,16 @@ body {
 
     .info {
         font-size: 10px;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
     }
 
     .texte-attenue {
         font-size: 10px;
-        line-height: 1.4;
         margin-top: 0.3rem;
     }
 
     .liste {
-        margin-left: 1.2rem;
+        margin-left: 1rem;
         font-size: 10px;
     }
 
@@ -331,7 +275,6 @@ body {
     }
 
     .grille-competences {
-        gap: 1.2rem 2rem;
         grid-template-columns: 1fr 1fr;
     }
 
@@ -340,8 +283,6 @@ body {
     }
 
     .titre-groupe-competences {
-        font-size: 11px;
-        margin-top: 0.6rem;
-        margin-bottom: 0.4rem;
+        margin: 0.6rem;
     }
 }
