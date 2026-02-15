@@ -213,7 +213,7 @@ body {
 
     html,
     body {
-        font-size: 12px;
+        font-size: 14px;
         print-color-adjust: exact;
     }
 
@@ -224,7 +224,6 @@ body {
 
     .colonne-gauche {
         padding: 8mm;
-        background-color: #000;
     }
 
     .liste-laterale {
